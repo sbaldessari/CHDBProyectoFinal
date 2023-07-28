@@ -1,0 +1,374 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url(../font/Rubik-VariableFont_wght.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik';
+}
+
+.animate__animated {
+    --animate-duration: 3s;
+}
+
+.bg-color-caja {
+    background-color: $color-caja;
+}
+
+.bg-color-boton {
+    background-color: $color-boton;
+
+    &:hover {
+        background-color: $color-boton-hover;
+    }
+}
+
+header {
+    background-image: $imagen-banner;
+    background-size: cover;
+    display: grid;
+
+    h1,
+    p {
+        text-align: center;
+        color: $color-fuente-titulo;
+    }
+
+    .lead {
+        font-size: 25pt;
+    }
+}
+
+body {
+    background-image: $imagen-fondo;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+main {
+    h2 {
+        margin: 15px;
+        text-align: center;
+        color: $color-fuente;
+    }
+
+    h3 {
+        margin: 15px;
+        text-align: center;
+        font-style: italic;
+        color: $color-fuente;
+    }
+}
+
+/* MENU PRINCIPAL */
+nav {
+    background-color: $color-boton;    
+    a {
+        color: $color-fuente-titulo!important;
+    }
+}
+/* FIN MENU PRINCIPAL */
+
+
+/*  HOME */ 
+.home {  
+    p {      
+        padding: 15px;
+        color: $color-fuente;  
+        font-size: xx-large;
+        text-align: center;
+        text-shadow: 2px 3px $color-caja;
+    }
+}
+.home-uno {
+    background-image: $imagen-home-uno;    
+    height: 500px;
+    background-size:cover;
+}
+.home-dos {
+    background-image: $imagen-home-dos;
+    height: 500px;
+    background-size:cover;
+}
+.home-tres {
+    background-image: $imagen-home-tres;
+    height: 500px;
+    background-size:cover;
+}
+
+
+/* FIN HOME */
+
+
+/* RRSS */
+
+footer {
+    background-color: $color-caja;
+
+    ul {
+        margin-right: 15px;
+    }
+}
+
+.footer-autor {
+    background-color: $color-boton; 
+}
+
+.footer-facebook{
+    d: path($forma-facebook);
+    fill: $color-fuente;
+}
+.footer-youtube{
+    d: path($forma-youtube);
+    fill: $color-fuente;
+}
+.footer-instagram-uno{
+    d: path($forma-instagram-uno);
+    fill: $color-fuente;
+}
+.footer-instagram-dos{
+    d: path($forma-instagram-dos);
+    fill: $color-fuente;
+}
+.footer-instagram-tres{
+    d: path($forma-instagram-tres);
+    fill: $color-fuente;
+}
+.footer-twitter{
+    d: path($forma-twitter);
+    fill: $color-fuente;
+}
+
+.footer-rect {     
+    stroke: $color-fuente;   
+}
+
+/* FIN RRSS */
+
+/* QUIENES SOMOS */
+
+.quienes-somos-caja {
+    background-color: $color-caja;
+    overflow: hide;
+    border: 1px solid $color-borde;
+
+    img {
+        object-fit: cover;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+    }
+
+    h4 {
+        text-align: center;
+        color: $color-fuente;
+    }
+}
+
+/* FIN QUIENES SOMOS */
+
+/* AVENTURAS */
+
+.aventuras {
+    margin-top: 5px;
+    overflow: hide;
+    vertical-align: top;
+    border: 1px solid $color-borde;
+
+    img {
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+    }
+
+    h4 {
+        text-align: center;
+    }
+}
+
+/* FIN AVENTURAS */
+
+/* CONTACTANOS */
+
+.contactanos {
+    label{
+        color: $color-fuente;
+    }
+    button{        
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+}
+
+/* FIN CONTACTANOS */
+
+/* EQUIPAMIENTO */
+
+.equipamiento {
+    text-align: left;
+
+    ul li.active {
+        text-align: center;
+        background-color: $color-boton;
+        border-color: $color-boton;
+    }
+}
+
+/* FIN EQUIPAMIENTO */
+
+/* EXPERIENCIAS */
+
+.experiencias main {
+    display: grid;
+}
+
+%alineacionNatural{
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: grid;  
+}
+
+.experiencias-twitter {
+    @extend %alineacionNatural;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    background-image: linear-gradient(to bottom, $color-gradiente-uno, $color-gradiente-dos, $color-gradiente-tres, $color-gradiente-cuatro, 
+                $color-gradiente-cinco, $color-gradiente-cinco, $color-gradiente-cinco, $color-gradiente-cinco, 
+                $color-gradiente-cuatro, $color-gradiente-tres, $color-gradiente-dos, $color-gradiente-uno);
+
+    div {
+        width: 300px;
+    }
+}
+
+.experiencias-youtube {
+    @extend %alineacionNatural;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+    background-image: linear-gradient(to bottom, $color-gradiente-uno, $color-gradiente-dos, $color-gradiente-tres, $color-gradiente-cuatro, 
+                $color-gradiente-cinco, $color-gradiente-cinco, $color-gradiente-cinco, $color-gradiente-cinco, 
+                $color-gradiente-cuatro, $color-gradiente-tres, $color-gradiente-dos, $color-gradiente-uno);
+    
+    div {
+        background-color: $color-caja;
+        overflow: hide;
+        padding: 15px;
+        margin: 50px;
+        border: 1px solid $color-borde;
+        height: 550px;
+
+        iframe {
+            width: 100%;
+            height: 300px;
+        }
+    }
+}
+
+/* FIN EXPERIENCIAS */
+
+/* MOBILE */
+@media (min-width: 0px) and (max-width: 576px) {
+    .home {
+        text-align: center;
+    }
+
+    .quienes-somos-caja {
+        p {
+            text-align: center;
+        }
+    }
+
+    .aventuras {
+        img {
+            padding: 15px;
+        }
+
+        h4,
+        p {
+            text-align: center;
+        }
+    }
+
+    .equipamiento {
+        width: 100%;
+        text-align: center;
+    }
+
+    .experiencias {
+        text-align: center;
+    }
+
+    .experiencias-twitter,
+    .experiencias-youtube {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer {
+        text-align: left;
+    }
+}
+
+/* TABLET */
+@media (min-width: 576px) and (max-width: 992px) {
+    .home {
+        text-align: center;
+    }
+
+    .quienes-somos-caja {
+        p {
+            text-align: center;
+        }
+    }
+
+    .aventuras {
+        img {
+            padding: 15px;
+        }
+
+        h4,
+        p {
+            text-align: center;
+        }
+    }
+
+    .equipamiento {
+        width: 100%;
+        text-align: center;
+    }
+
+    .experiencias {
+        text-align: center;
+    }
+
+    .experiencias-twitter {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .experiencias-youtube {
+        column-gap: 0px;
+        row-gap: 0px;
+
+        div {
+            height: 600px;
+        }
+    }
+
+    footer {
+        text-align: left;
+    }
+}
